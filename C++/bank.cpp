@@ -79,13 +79,13 @@ int main()
 		
 	case 1:
 	{
-		double u_pin;
+		double atmpin;
 		cout<<"\nEnter the pin(Default pin is = 12345 ) ";
         	cout<<"\nonly one attampt allowed";
         	cout<<"\nATM pin = ";
-		cin>>u_pin;
+		cin>>atmpin;
 			
-		if(pin==u_pin)
+		if(pin == atmpin)
 		{
 			menu:
 			cout <<"\n*********** ATM MENU ***********" ;
