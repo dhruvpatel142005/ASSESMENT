@@ -77,68 +77,68 @@ int main()
 	switch(choice)
 	{
 		
-		case 1:
-		{
-			double u_pin;
-			cout<<"\nEnter the pin(Default pin is = 12345 ) ";
-            cout<<"\nonly one attampt allowed";
-            cout<<"\nATM pin = ";
-			cin>>u_pin;
+	case 1:
+	{
+		double u_pin;
+		cout<<"\nEnter the pin(Default pin is = 12345 ) ";
+        	cout<<"\nonly one attampt allowed";
+        	cout<<"\nATM pin = ";
+		cin>>u_pin;
 			
-			if(pin==u_pin)
+		if(pin==u_pin)
+		{
+			menu:
+			cout <<"\n*********** ATM MENU ***********" ;
+			cout<<"\n 1. Check balance";
+			cout<<"\n 2. deposit";
+			cout<<"\n 3. withdraw";
+			cout<<"\n 4. exit";
+			cout<<"\n Enter The choice = ";
+			cin>>choice;
+			switch(choice)
 			{
-				menu:
-				cout <<"\n*********** ATM MENU ***********" ;
-				cout<<"\n 1. Check balance";
-				cout<<"\n 2. deposit";
-				cout<<"\n 3. withdraw";
-				cout<<"\n 4. exit";
-				cout<<"\n Enter The choice = ";
-				cin>>choice;
-				switch(choice)
-					{
-						case 1 :
-						{
-							a1.display();
-							a1.checkbalance();
-							break;
-						}
-						case 2 :
-						{
-							a1.display();
-							a1.checkbalance();
-							cout<<"\nEnter the amount you want to deposit = ";
-							cin>>deposit;
-							a1.deposit(deposit);
-							break;
-						}
-						case 3 :
-						{
-							a1.display();
-							a1.checkbalance();					
-							cout<<"\nEnter the amount you want to withdraw = ";
-							cin>>withdraw;
-							a1.withdraw(withdraw);
-							break;
-						}
-                        case 4 :
-						{
-							cout<<"Exiting...";
-							goto end;
-							break;
-						}
-						default:
-						{
-							cout<<"Invalid choice";
-						}
-					}
-				}
-				else
+				case 1 :
 				{
-					cout<<"Your Attamped failed !! No more attamped allowed !!";
+					a1.display();
+					a1.checkbalance();
 					break;
 				}
-					goto menu;		
+				case 2 :
+				{
+					a1.display();
+					a1.checkbalance();
+					cout<<"\nEnter the amount you want to deposit = ";
+					cin>>deposit;
+					a1.deposit(deposit);
+					break;
+				}
+				case 3 :
+				{
+					a1.display();
+					a1.checkbalance();					
+					cout<<"\nEnter the amount you want to withdraw = ";
+					cin>>withdraw;
+					a1.withdraw(withdraw);
+					break;
+				}
+                                case 4 :
+				{
+					cout<<"Exiting...";
+					goto end;
+					break;
+				}
+				default:
+				{
+					cout<<"Invalid choice";
+				}
+			}
+		}
+		else
+		{
+			cout<<"Your Attamped failed !! No more attamped allowed !!";
+			break;
+		}
+			goto menu;		
 		}
         case 2:
 		{
