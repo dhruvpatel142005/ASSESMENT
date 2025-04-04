@@ -68,7 +68,7 @@ int main()
 	time_t tt=time(0);
 	char*dt=ctime(&tt);
 	cout<<"\nCurrent date and time = "<<dt;
-	ATM a1("Dhruv Patel","Ahmedabad","Gujrat",1234,30000);
+	ATM a1("Dhruv Patel","Ahmedabad","Gujrat",1234,60000);
 	start:        
 	cout << "1. Access your Account" ;
     cout << "\n2. Help" ;
